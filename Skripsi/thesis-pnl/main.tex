@@ -1,0 +1,141 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{microtype}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage{mathptmx}
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{{img/}}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{longtable}
+
+
+\usepackage{geometry}
+\geometry{
+	top=4cm,
+	right=3cm,
+	left=4cm,
+	bottom=3cm,	
+}
+
+\usepackage{pdflscape}
+\usepackage{tabularray}
+\usepackage[table]{xcolor}
+\usepackage{setspace}
+\onehalfspacing
+  
+\renewcommand{\thechapter}{\centering \Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+
+\def\contentsname{DAFTAR ISI}
+\renewcommand\bibname{DAFTAR PUSTAKA}
+\def\chaptername{BAB}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\normalfont\bfseries\centering}{\MakeUppercase{\chaptertitlename}~\thechapter}{0pt}{}
+\titlespacing*{\chapter}{0pt}{-2pt}{16pt}
+
+\renewcommand{\arraystretch}{1.5}
+
+\renewcommand\thechapter{\Roman{chapter}}
+\renewcommand\thesection{\arabic{section}}
+\def\thesection{\arabic{chapter}.\arabic{section}}
+\def\thetable{\arabic{table}}
+
+\titleformat{\section}[block]{\bf\normalsize}{\thesection}{0.6em}{}
+\titlespacing*{\section}{0pt}{5pt}{0pt}
+\titleformat{\subsection}[block]{\bf\normalsize}{\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{5pt}{0pt}
+
+\usepackage{setspace}
+%\singlespacing
+\onehalfspacing
+%\doublespacing
+%\setstretch{1.1}
+\renewcommand{\tablename}{Tabel}
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\usepackage[breaklinks]{hyperref}
+\renewcommand{\listfigurename}{DAFTAR GAMBAR}
+\renewcommand{\listtablename}{DAFTAR TABEL}
+
+\hyphenation{me-la-in-kan}
+
+\input{settings}
+
+\begin{document}
+
+\input{cover}
+\pagenumbering{roman}
+\input{pengesahan}
+
+\tableofcontents
+\addcontentsline{toc}{chapter}{DAFTAR ISI}
+
+
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename}
+
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
+
+
+\input{ringkasan}
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{bab1}
+\input{bab2}
+\input{bab3}
+\input{jadwal-kegiatan}
+\input{rencana-anggaran}
+
+\begin{thebibliography}{9}
+%\bibitem{tri}
+%Tri Mulyono, Kusworo Adi dan Rahmat Gernowo 2012. \emph{SISTEM PENGENALAN WAJAH DENGAN METODE EIGENFACE DAN JARINGAN SYARAF TIRUAN (JST)}, Berkala Fisika ISSN : 1410 - 9662. Vol. 15, No. 1, Januari 2012, hal 15 - 20
+
+\bibitem{nix}
+Nixon Erzed, Nizirwan Anwar, Agung Mulyo Widodo, Eko Prasetyo, Kundang Karsono Juman 2022 \emph{Implementasi Flutter Pada Aplikasi Presensi Karyawan Berbasis Mobile}, P-ISSN :2580-4316, E-ISSN :2654-8054 https://journals.upi-yai.ac.id/index.php/ikraith-informatika/issue/archive
+
+\bibitem{and}
+Andi Maulidinnawati Abdul Kadir Parewe, A. Sumardin, Muhammad Isra Pratama \emph{Penerapan Metode Scrum dengan Framework Flutter dalam Teknologi Location based service Pada Sistem Provos Polisi}, Prosiding Seminar Nasional Teknik Elektro dan Informatika (SNTEI) 2022 – Teknik Informatika
+
+\bibitem{k}
+K. Hermawan, 2018. \emph{SIMULASI ENERGI OUTPUT MENGGUNAKAN APLIKASI CSharp DI PLTH BAYU BIRU YOGYAKARTA} 
+
+\bibitem{ara}
+Arafat Febriandirza, 2020. \emph{ERANCANGAN APLIKASI ABSENSI ONLINE DENGAN MENGGUNAKAN BAHASA PEMROGRAMAN KOTLIN}, Jurnal Pseudocode, Volume VII Nomor 2, September 2020, ISSN 2355-5920, e-ISSN 2655-1845 www.ejournal.unib.ac.id/index.php/pseudocode
+
+\bibitem{l}
+L. Septi and S. Wellia Shinta, 2015. \emph{Perancangan Aplikasi Mobile E-Commerce Berbasis Android Pada Violet Fashion Jepara}Sist. Inf., no. 5, p. 2.
+
+\bibitem{dims}
+Apa itu Android Studio dan Android SDK?, [Online]. Avaliable: https://www.dicoding.com/blog/apa-itu-android-studio-dan-android-sdk/ [Accesed 13 Maret 2023]
+
+\bibitem{faz}
+Fazriani Huzaimah, Dedy Irfan, 2018. \emph{RANCANG BANGUN APLIKASI UJIAN ONLINE PRA KOMPRE BERBASIS ANDROID}, VOTEKNIKA, Jurnal Vokasional Teknik Elektronika dan Informatika, http://ejournal.unp.ac.id/index.php/voteknika/index, Vol. 6, No. 2, Supplement (Juli – Desember 2018) E - ISSN: 2302-295
+
+\bibitem{sten}
+Stenly Ibrahim Adam, Oktoverano Lengkong, Stenly Pungus, 2021. \emph{Pengembangan Aplikasi Mobile Presensi Mahasiswa Berbasis QR-Code Di Universitas Klabat}. Cogito Smart Journal | VOL. 7 - NO.2, DESEMBER 2021.
+
+\bibitem{gab}
+Gabriella Genevine, Usman Rizal, 2015. \emph{ANALISIS PERBANDINGAN METODE TRANSFORMASI WAVELET DAN METODE EIGENFACE PADA PENGENALAN CITRA WAJAH DENGAN ANALISIS SWOT}, ISSN 2088-5555, Jurnal Manajemen Sistem Informasi Dan Teknologi Volume 05, Nomor 01, Juni 2015
+
+\bibitem{susi}
+Susi Tamba, 2022. \emph{Perancangan Aplikasi Absensi Karyawan Dengan Deteksi Wajah Menggunakan Metode Eigenface}, Journal of Informatics, Electrical and Electronics Engineering. ISSN 2807-9507 (Media Online), Vol 2, No 1, September 2022. Hal 12 - 17
+
+\bibitem{jem}
+JemyAgungPribadi, NinaSetiyawati, 2021. \emph{AbsenLoc: Aplikasi Absensi Mobile Berbasis Lokasi},  Jurnal Sistem dan Teknologi Informasi, p-ISSN : 2460-3562 / e-ISSN : 2620-8989, DOI: 10.26418/justin.v9i1.41103 Vol. 09, No. 1, Januari 2021
+
+\end{thebibliography}
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+
+\end{document}
